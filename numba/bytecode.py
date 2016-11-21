@@ -81,6 +81,7 @@ def _make_bytecode_table():
     if sys.version_info[:2] <= (3, 5):
         version_specific += [
             ('MAKE_CLOSURE', 2),
+            ('CALL_FUNCTION_VAR', 2),
         ]
 
     bytecodes = [
@@ -105,7 +106,6 @@ def _make_bytecode_table():
         ('BUILD_SLICE', 2),
         ('BUILD_TUPLE', 2),
         ('CALL_FUNCTION', 2),
-        ('CALL_FUNCTION_VAR', 2),
         ('COMPARE_OP', 2),
         ('DELETE_ATTR', 2),
         ('DELETE_SUBSCR', 0),
